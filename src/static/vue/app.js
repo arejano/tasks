@@ -3,21 +3,26 @@ Vue.component('lista-tarefas', {
 		return {
 			lista_tarefas: [
 				{
-					nome: 'Teste1'
+					nome: 'Teste1',
+					status: ''
 				},
 				{
-					nome: 'Teste2'
+					nome: 'Teste2',
+					status: ''
 				},
 				{
-					nome: 'Teste3'
+					nome: 'Teste3',
+					status: 'completo'
 				},
-			]
+			],
 		}
 	},
 	template:`
 	<div id='container-lista-tarefas'>
 	<div v-for='(tarefa, index) in lista_tarefas'>
-	{{ tarefa.nome }}
+		<input value='tarefa.status' type='checkbox'>
+			{{ tarefa.nome }}
+		</input>
 	</div>
 	</div>
 
